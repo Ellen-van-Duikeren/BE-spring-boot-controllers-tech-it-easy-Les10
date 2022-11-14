@@ -1,34 +1,69 @@
 package nl.novi.TechItEasy.Controllers;
 
+import nl.novi.TechItEasy.Exceptions.IndexOutOfBoundsException;
+import nl.novi.TechItEasy.Exceptions.RecordNotFoundException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @RestController
 public class TelevisionsController {
+
+    // ik had hier eerst private final List<String> televisionDataBase = Arrays.asList("Philips 43PUS6504/12", "Nikkei NH3216SMART", "Samsung QE55Q60T", "Hitachi 43HAK6152", "Philips 55PUS7805", "Brandt B2450HD"); staan, maar dat werkte niet in de post en delete methode omdat ie er kennelijk dan geen array van maakt maar een list waarop ik de add en remove methode niet mocht uitvoeren.
+    private final ArrayList<String> televisionDataBase = new ArrayList<>();
+
+    public TelevisionsController() {
+        televisionDataBase.add("Philips 43PUS6504");
+        televisionDataBase.add("Nikkei NH3216SMART");
+        televisionDataBase.add("Samsung QE55Q60T");
+        televisionDataBase.add("Hitachi 43HAK6152");
+        televisionDataBase.add("Philips 55PUS7805");
+        televisionDataBase.add("Brandt B2450HD");
+    }
+
     @GetMapping("/televisions")
     public ResponseEntity<Object> getAllTelevisions() {
-        return ResponseEntity.ok("television");
+        return new ResponseEntity(televisionDataBase, HttpStatus.OK);
     }
 
     @GetMapping("/televisions/{id}")
     public ResponseEntity<Object> getTelevision(@PathVariable int id) {
-        return ResponseEntity.ok("television");
+        if (id >= 0 && id < televisionDataBase.size()) {
+            return ResponseEntity.ok(televisionDataBase.get(id));
+        } else {
+            throw new IndexOutOfBoundsException("invalid id");
+        }
     }
 
     @PostMapping("/televisions")
-    public ResponseEntity<Object> addTelevision(@RequestBody String type) {
-        return ResponseEntity.created(null).body("television");
+    public  ResponseEntity<Object> addTelevision(@RequestBody String tv) {
+        televisionDataBase.add(tv);
+        return new ResponseEntity<>(tv + " is added.", HttpStatus.CREATED);
     }
 
     @PutMapping("/televisions/{id}")
-    public ResponseEntity<Object> updateTelevision(@PathVariable int id, @RequestBody String type) {
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<Object> updateTelevision(@PathVariable int id, @RequestBody String tv) {
+        if (id >= 0 && id < televisionDataBase.size()) {
+            televisionDataBase.set(id, tv);
+            return ResponseEntity.noContent().build();
+        } else {
+            return new ResponseEntity<>("invalid id", HttpStatus.NOT_FOUND);
+        }
     }
 
     @DeleteMapping("/televisions/{id}")
     public ResponseEntity<Object> deleteTelevision(@PathVariable int id) {
-        return ResponseEntity.noContent().build();
+        if (id >= 0 && id < televisionDataBase.size()) {
+            televisionDataBase.remove(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            throw new IndexOutOfBoundsException("invalid id");
+        }
     }
 
 }

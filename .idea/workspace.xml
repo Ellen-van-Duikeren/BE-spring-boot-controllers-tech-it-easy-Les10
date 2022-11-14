@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ddbfd79-ce3d-438f-9e20-fd399bb7895b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Les10-huiswerk-tech-it-easy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Controllers/ExceptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Controllers/TelevisionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Exceptions/RecordNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Les10-huiswerk-tech-it-easy-nogmaals.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechItEasy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TechItEasy/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Exceptions/IndexOutOfBoundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Controllers/TelevisionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Controllers/TelevisionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Exceptions/RecordNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/TechItEasy/src/main/java/nl/novi/TechItEasy/Exceptions/RecordNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechItEasy/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TechItEasy/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +43,36 @@
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/evand/Novi/BackEnd/Lessen/Les10-huiswerk-tech-it-easy"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/evand/Novi/BackEnd/Lessen/Les9-SD-BE-SB-Demo-Application-Edhub_SpringBoot&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="TechItEasyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="nl.novi.TechItEasy.TechItEasyApplication" />
+      <module name="TechItEasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.novi.TechItEasy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TechItEasyApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
