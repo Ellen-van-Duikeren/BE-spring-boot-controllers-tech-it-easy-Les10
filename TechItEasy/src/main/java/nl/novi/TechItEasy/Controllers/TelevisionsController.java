@@ -12,13 +12,14 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+// toegevoegd nav feedback
 @RequestMapping("/televisions")
 public class TelevisionsController {
 
     // ik had hier eerst private final List<String> televisionDataBase = Arrays.asList("Philips 43PUS6504/12", "Nikkei NH3216SMART", "Samsung QE55Q60T", "Hitachi 43HAK6152", "Philips 55PUS7805", "Brandt B2450HD"); staan, maar dat werkte niet in de post en delete methode omdat ie er kennelijk dan geen array van maakt maar een list waarop ik de add en remove methode niet mocht uitvoeren.
     private static final ArrayList<String> televisionDataBase = new ArrayList<>();
 
-    // volgens feedback is het netter om deze add functies nit in de constructor te zetten
+    // volgens feedback is het netter om deze add functies niet in de constructor te zetten
     static
     {
         televisionDataBase.add("Philips 43PUS6504");
